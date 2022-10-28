@@ -19,6 +19,11 @@ Install all dependency required by Laravel.
 ```shell
 $ composer install
 ```
+Or you can do composer update 
+
+```shell
+$ composer update
+```
 
 configure `.env` file 
 
@@ -27,9 +32,9 @@ configure `.env` file
 $ cp .env.example .env
 ```
 
-Tambahkan script di bawah ini pada file .env jika belum ada pada file .env
+Add this script to .env file
 ```shell
-# letakkan dibagian paling bawah di env
+# put it at the end of the .env file
 FILESYSTEM_DRIVER=public
 ```
 Generate app key and do migration. And then, you can use it
@@ -50,3 +55,11 @@ $ php artisan migrate --seed
 $ php artisan serve
 ```
 
+Login using this default account
+```shell
+email : admin@gmail.com
+password : 12345
+
+email : user@gmail.com
+password : 12345
+```
