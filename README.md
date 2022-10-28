@@ -20,7 +20,7 @@ Install all dependency required by Laravel.
 $ composer install
 ```
 
-Generate app key, configure `.env` file and do migration.
+configure `.env` file 
 
 ```shell
 # create copy of .env
@@ -32,6 +32,7 @@ Tambahkan script di bawah ini pada file .env jika belum ada pada file .env
 # letakkan dibagian paling bawah di env
 FILESYSTEM_DRIVER=public
 ```
+Generate app key and do migration. And then, you can use it
 
 ```shell
 # cek apakah storage sudah terhubung dengan public
