@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('dashboard.layouts.mainform')
 @section('container') 
 
 
@@ -11,7 +11,7 @@
     <div class="col-lg-8">
         <form method="POST" action="/dashboard/bugreportadmin" class="mb-5" enctype="multipart/form-data">
             @csrf
-            <div class="mb-3">
+            <div class="input-group input-group-outline my-3">
               <label for="judul" class="form-label">Judul Laporan</label>
               <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" required autofocus value="{{ old('judul') }}">
               @error('judul')
@@ -20,7 +20,7 @@
                   </div>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="input-group input-group-outline my-3">
               <label for="slug" class="form-label">Slug</label>
               <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug">
               @error('slug')
@@ -54,7 +54,8 @@
                       <option value="5">Sales Agent</option>
                   </select>
             </div>
-            <div class="mb-3">
+            <div class="input-group input-group-outline my-3">
+              
               <label for="link" class="form-label">Link ditemukannya bug</label>
               <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" name="link" required autofocus value="{{ old('link') }}">
               @error('link')
@@ -63,17 +64,17 @@
                   </div>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="my-3">
               <label for="formFile" class="form-label">Upload Gambar Bug / Feature Request</label>
               <img class="img-preview img-fluid mb-3 col-sm-5">
-              <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" required>
+              <input class="input-group-outline form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()" required>
               @error('image')
                   <div class="invalid-feedback">
                     {{ $message }}
                   </div>
               @enderror
             </div>
-            <div class="mb-3">
+            <div class="my-3">
               <label for="deskripsi" class="form-label">Deskripsi</label>
               @error('deskripsi')
                   <p class="text-danger">{{ $message }}</p>
@@ -81,8 +82,6 @@
               <input id="deskripsi" type="hidden" name="deskripsi" value="{{ old('deskripsi') }}">
               <trix-editor input="deskripsi"></trix-editor>
             </div>
-
-
 
             <button type="submit" class="btn btn-primary">Create Bug Report</button>
           </form>

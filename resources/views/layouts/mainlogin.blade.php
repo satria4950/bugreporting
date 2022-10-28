@@ -4,49 +4,38 @@
 	<title>Bug Reporting | {{ $title }}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="csslogin/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="csslogin/css/util.css">
-	<link rel="stylesheet" type="text/css" href="csslogin/css/main.css">
-<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  	<!-- Nucleo Icons -->
+	<link href="logincss/css/nucleo-icons.css" rel="stylesheet" />
+	<link href="logincss/css/nucleo-svg.css" rel="stylesheet" />
+	<!-- Font Awesome Icons -->
+	<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+	<!-- Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+	<!-- CSS Files -->
+	<link id="pagestyle" href="logincss/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+
 </head>
 <body>
 	
     @yield('container')
 	
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/bootstrap/js/popper.js"></script>
-	<script src="csslogin/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/daterangepicker/moment.min.js"></script>
-	<script src="csslogin/vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="csslogin/js/main.js"></script>
+	<script src="logincss/js/core/popper.min.js"></script>
+	<script src="logincss/js/core/bootstrap.min.js"></script>
+	<script src="logincss/js/plugins/perfect-scrollbar.min.js"></script>
+	<script src="logincss/js/plugins/smooth-scrollbar.min.js"></script>
+	<script>
+	  var win = navigator.platform.indexOf('Win') > -1;
+	  if (win && document.querySelector('#sidenav-scrollbar')) {
+		var options = {
+		  damping: '0.5'
+		}
+		Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+	  }
+	</script>
+	<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+	<script src="logincss/js/material-dashboard.min.js?v=3.0.4"></script>
+  
 
 </body>
 </html>
