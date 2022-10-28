@@ -27,7 +27,11 @@ Generate app key, configure `.env` file and do migration.
 $ cp .env.example .env
 ```
 
-Ubah env sesuai dengan keperluan
+Tambahkan script di bawah ini pada file .env jika belum ada pada file .env
+```shell
+# letakkan dibagian paling bawah di env
+FILESYSTEM_DRIVER=public
+```
 
 ```shell
 # cek apakah storage sudah terhubung dengan public
